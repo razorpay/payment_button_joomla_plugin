@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" method="upgrade" group="editors-xtd">
+        <name>PaymentButton</name>
+        <author>Razorpay</author>
+        <creationDate>Nov 2021</creationDate>
+        <copyright>Month Name. All rights reserved.</copyright>
+        <license>GPL</license>
+        <authorEmail>neeraj.s@razorpay.com</authorEmail>
+        <authorUrl>Your URL</authorUrl>
+        <version>1.0.0</version>
+        <description>
+            "adds the button 'payment button' to the editor"
+        </description>
+        <files>
+            <filename plugin="PaymentButton">PaymentButton.php</filename>
+            <folder>sql</folder>
+
+        </files>
+        <install>
+            <sql>
+                <file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
+                <file driver="sqlazure" charset="utf8">sql/sqlazure/install.sqlazure.utf8.sql</file>
+            </sql>
+        </install>
+
+        <uninstall>
+            <sql>
+                <file driver="mysql" charset="utf8">sql/mysql/uninstall.mysql.utf8.sql</file>
+                <file driver="sqlazure" charset="utf8">sql/sqlazure/uninstall.sqlazure.utf8.sql</file>
+            </sql>
+</uninstall>
+
+</extension>
